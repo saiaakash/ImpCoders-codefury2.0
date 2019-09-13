@@ -1,4 +1,9 @@
 # ImpCoders-codefury2.0
+
+## Prerequisites
+Make sure you have installed node js on your system .
+You can download it from [here](https://nodejs.org/en/download/)
+
 ## Steps to copy this project on your pc
 1. fork this project (option can be found to right  of title)
 2. clone /download it to your pc
