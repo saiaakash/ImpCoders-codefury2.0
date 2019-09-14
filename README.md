@@ -11,4 +11,3 @@ You can download it from [here](https://nodejs.org/en/download/)
 4. open new terminal in vscode using  **ctrl+ shift + `**
 5. execute this command **npm install** and then **npm start**
 
-
