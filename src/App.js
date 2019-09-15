@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <h1>Hello World</h1>
-
       <p>This is a test project</p>
       <br></br>
       <b>bold</b>
@@ -15,6 +14,7 @@ function App() {
       <br></br>
       <u>underlined</u>
       <br></br>
+      <b>Paneer Tikka</b>
       <Button>1</Button>
     </div>
   );
