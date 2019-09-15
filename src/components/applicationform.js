@@ -5,7 +5,7 @@ import PatentItem from "./patentItem"
 import { Container, Row, Col } from 'reactstrap'
 import { Button, Form, FormControl } from "react-bootstrap";
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
-
+import db from "../firebase"
 
 
 
@@ -17,7 +17,22 @@ class ApplicationForm extends React.Component {
             textToDisplay: ""
         }
     }
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value });
+        
+      }
 
+      sendDataToDatabase= ()=>{
+        
+        const key = db.ref("patent").push().key
+    
+        const newItem={}
+        newItem[key]=this.state
+    
+        db.ref("patent").update(newItem)
+       
+        alert("Submitted")
+      }
     render() {
         return (
             <div>
@@ -26,17 +41,17 @@ class ApplicationForm extends React.Component {
                   <Form>
                     <Form.Group controlId="exampleForm.ControlInput1">
                       <Form.Label>Name</Form.Label>
-                      <Form.Control type="Name" placeholder="Name" />
+                      <Form.Control onChange={this.handleChange} name="name" type="Name" placeholder="Name" />
                       <Form.Label>Number</Form.Label>
-                      <Form.Control type="Number" placeholder="Number" />
+                      <Form.Control onChange={this.handleChange} name="number" type="Number" placeholder="Number" />
                       <Form.Label>City/State</Form.Label>
-                      <Form.Control type="City/State" placeholder="City/State" />
+                      <Form.Control onChange={this.handleChange} name="city" type="City/State" placeholder="City/State" />
                       <Form.Label>Country</Form.Label>
-                      <Form.Control type="Country" placeholder="Country" />
+                      <Form.Control onChange={this.handleChange} name= "country" type="Country" placeholder="Country" />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlSelect1">
                       <Form.Label>What is your status?</Form.Label>
-                      <Form.Control as="select">
+                      <Form.Control onChange={this.handleChange} name ="type" as="select">
                         <option>Startup</option>
                         <option>Individual</option>
                         <option>SME</option>
@@ -46,25 +61,23 @@ class ApplicationForm extends React.Component {
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlSelect2">
                       <Form.Label>Type of Patent</Form.Label>
-                      <Form.Control as="select" multiple>
+                      <Form.Control onChange={this.handleChange} name="Type of patent "type = "Type of patent" as="select" multiple>
                         <option>Provisional Patent</option>
                         <option>Complete Patent</option>
                       </Form.Control>
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlSelect2">
+                    <Form.Group onChange={this.handleChange} controlId="exampleForm.ControlSelect2">
                       <Form.Label>Patent filing region</Form.Label>
-                      <Form.Control as="select" multiple>
+                      <Form.Control onChange={this.handleChange} name= "Patent filing region" as="select" multiple>
                         <option>Country 1</option>
                         <option>Country 2</option>
                         <option>Country 3</option>
                         <option>Country 4</option>
                         <option>Country 5</option>
                       </Form.Control>
+                      <Button onClick={this.sendDataToDatabase}>Submit</Button>
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                      <Form.Label>Example textarea</Form.Label>
-                      <Form.Control as="textarea" rows="3" />
-                    </Form.Group>
+                    
                   </Form>
 
                 </Card>

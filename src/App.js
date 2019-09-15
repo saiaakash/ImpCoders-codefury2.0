@@ -1,24 +1,30 @@
 import React from "react";
 import "./App.css";
+import SignUp from "./components/signup"
 import Landing from "./components/landing"
-import { Button } from "react-bootstrap";
-import firebase from "./firebase"
-class App extends React.Component{
+import PatentItem from "./components/applicationform"
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
-  constructor(){
-    super()
-    this.state={
-      textToDisplay:""
-    }
-  }
+const router = (
+  <Router>
+    <div>
+    <Route exact path="/" component={Landing}/>
+    <Route exact path="/signup" component={SignUp}/>
+    <Route exact path ="/register" component ={PatentItem}/>
+    
+    </div>
+    
+</Router>
+)
 
-render() {
+function App() {
+ 
   return (
     <div>
-      <Landing/>
+      {router}
     </div>  
   )
 }
-}
+
 
 export default App;

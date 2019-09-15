@@ -51,14 +51,7 @@ class Landing extends React.Component {
            
             </NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: this.state.activeTab === '2' })}
-            onClick={() => { this.toggle('2'); }}
-          >
-            <h1>Apply</h1>
-            </NavLink>
-        </NavItem>
+        
       </Nav>
       <TabContent activeTab={this.state.activeTab}>
         <TabPane tabId="1">
