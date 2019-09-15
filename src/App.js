@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Login from "./components/login"
+import PatentItem from "./components/patentItem"
 import { Button } from "react-bootstrap";
 import firebase from "./firebase"
 class App extends React.Component{
@@ -15,8 +16,9 @@ class App extends React.Component{
 render() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1 style={{textAlign:"center"}}>Hi Patent</h1>
       <Login/>
+      <PatentItem/>
     </div>  
   )
 }
