@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Form, Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 class Signup extends React.Component {
   constructor() {
@@ -13,6 +13,7 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
+        <b>REGISTER</b>
         <Form>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Name</Form.Label>
