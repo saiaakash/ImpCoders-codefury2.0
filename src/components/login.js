@@ -1,6 +1,5 @@
 import React from "react";
 
-import NavigationBar from "./navigation"
 import { Button, Form, FormControl } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -17,7 +16,7 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <NavigationBar />
+        
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

@@ -1,7 +1,8 @@
 import React from "react";
-import "./App.css";
-
-class App extends React.Component{
+import Login from "./login"
+import NavigationBar from "./navigation"
+import PatentItem from "./patentItem"
+class Landing extends React.Component{
 
   constructor(){
     super()
@@ -13,10 +14,13 @@ class App extends React.Component{
 render() {
   return (
     <div>
+        <NavigationBar/>
+        <div style={{width:"70%"}}><Login/></div>
       
+      <PatentItem/>
     </div>  
   )
 }
 }
 
-export default App;
+export default Landing;
