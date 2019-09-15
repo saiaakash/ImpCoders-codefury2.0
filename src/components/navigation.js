@@ -15,13 +15,13 @@ class NavigationBar extends React.Component {
     render() {
         return (
             <div>
-                <Navbar bg="light" expand="lg">
+                <Navbar bg="dark" variant="dark" expand="lg" >
                     <Navbar.Brand href="#home">hiPatent</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="#home">What is a patent ? </Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#link">Submit your idea</Nav.Link>
                             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

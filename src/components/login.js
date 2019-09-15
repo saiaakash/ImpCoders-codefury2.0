@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 
 import { Button, Form, FormControl } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -30,7 +31,8 @@ class Login extends React.Component {
     return (
 
       <div>
-
+         <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+        <CardTitle><b>Login</b></CardTitle>
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -55,6 +57,9 @@ class Login extends React.Component {
             Submit
           </Button>
         </Form>
+        
+      </Card>
+        
       </div>
 
 
