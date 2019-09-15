@@ -9,7 +9,7 @@ super()
 render() {
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' , opacity: "5%" }}>
   <Card.Body>
     <Card.Title>Patent Title</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">Patent Description</Card.Subtitle>

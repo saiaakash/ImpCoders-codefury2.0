@@ -32,6 +32,7 @@ class Signup extends React.Component {
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Gender</Form.Label>
             <Form.Control as="select">
+              
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
