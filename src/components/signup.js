@@ -15,7 +15,7 @@ render() {
   return (
     <div>
       <h1>Hello World</h1>
-      
+      <input type="file" name="file" onChange={this.onChangeHandler}/>
     </div>  
   )
 }

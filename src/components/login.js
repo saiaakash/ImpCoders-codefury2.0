@@ -14,10 +14,25 @@ class Login extends React.Component {
     }
   }
 
+
+  /*  onChangeHandler=event=>{
+  
+      console.log(event.target.files[0])
+  
+  }
+  
+  <input type="file" name="file" onChange={this.onChangeHandler}/>
+  
+  */
+
+
+
   render() {
     return (
+
       <div>
         <NavigationBar />
+
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -32,7 +47,7 @@ class Login extends React.Component {
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
-          {/* <Form.Check type="checkbox" label="Show password" /> */}
+            {/* <Form.Check type="checkbox" label="Show password" /> */}
           </Form.Group>
           {/* Link to Signup page here
           */}
