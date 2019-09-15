@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Login from "./components/login"
+import Landing from "./components/landing"
 import { Button } from "react-bootstrap";
 import firebase from "./firebase"
 class App extends React.Component{
@@ -15,8 +15,7 @@ class App extends React.Component{
 render() {
   return (
     <div>
-      <h1>Hello World</h1>
-      <Login/>
+      <Landing/>
     </div>  
   )
 }
